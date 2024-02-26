@@ -1,0 +1,89 @@
+﻿<Window x:Class="Winform_Market_Project.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Winform_Market_Project.Views"
+                xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent"
+        mc:Ignorable="d"
+        Title="MainView"
+        Height="760" Width="1280"
+        >
+    <Grid>
+        <Border Background="#cfd5e5" CornerRadius="40" BorderThickness="2" BorderBrush="#ebedf3" Padding="20" MouseDown="Border_MouseDown"  >
+            <Border CornerRadius="40">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0, 1">
+                        <GradientStop Color="#fefefe" Offset="0" />
+                        <GradientStop Color="#fefefe" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Left menu -->
+                    <Border CornerRadius="30" Background="#7163ba" Margin="20">
+                        <Grid>
+                            <StackPanel VerticalAlignment="Top">
+                                <Button Style="{StaticResource topMenuButton}">
+                                    <Icon:PackIconMaterial Kind="ShoppingOutline"/>
+                                </Button>
+                                <Separator Background="#877cc5" Margin="20 0 20 10" Height="0.8"/>
+                                <Button Style="{StaticResource menuButton}" Background="#5a5080">
+                                    <Icon:PackIconMaterial Kind="HomeVariant"/>
+                                </Button>
+                                <Button Style="{StaticResource menuButton}">
+                                    <Icon:PackIconMaterial Kind="Shopping"/>
+                                </Button>
+                                <Button Style="{StaticResource menuButton}">
+                                    <Icon:PackIconMaterial Kind="Account"/>
+                                </Button>
+                                <Button Style="{StaticResource menuButton}">
+                                    <Icon:PackIconMaterial Kind="fileDocument"/>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <!-- Main menu -->
+                    <Grid Grid.Column="1" Margin="5 20 25 20">
+                        <!--<Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    -->
+                        <!-- Title Section -->
+                        <!--
+                    <StackPanel Margin="7 10 0 25">
+                        <TextBlock Text="Primary" Foreground="#797295" FontSize="13"/>
+                        <TextBlock Text="Dashboard" Style="{StaticResource titleText}" />
+                    </StackPanel>-->
+
+                    </Grid>
+
+
+
+
+                </Grid>
+
+            </Border>
+        </Border>
+
+    </Grid>
+</Window>
