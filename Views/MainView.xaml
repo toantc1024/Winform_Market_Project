@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Winform_Market_Project.Views"
                 xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="Transparent"
@@ -55,6 +54,10 @@
 
                     <!-- Main menu -->
                     <Grid Grid.Column="1" Margin="5 20 25 20">
+                        <TextBlock Text="Top product" FontSize="32"/>
+                        <Border BorderBrush="Red" BorderThickness="1">
+                            
+                        </Border>
                         <!--<Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="*" />

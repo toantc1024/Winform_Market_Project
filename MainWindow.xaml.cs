@@ -21,8 +21,10 @@ namespace Winform_Market_Project
         {
             InitializeComponent();
             LoginView loginView = new LoginView();
-            loginView.Show();
+            loginView.ShowDialog();
+
         }
+
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
