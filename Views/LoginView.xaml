@@ -3,30 +3,65 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Winform_Market_Project.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="400" Width="300">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        Title="Login" 
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStyle="None"
+        Background="Transparent"
+AllowsTransparency="True"
+    ResizeMode="NoResize"
+        FontSize="18"
+        Height="645" Width="875">
+    <Grid Margin="28">
 
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <TextBlock Text="Username"/>
-                <TextBox  Background="red" Height="10" Margin="10"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.22*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="#FFFF7500"
+                CornerRadius="10 0 0 10"
+                ClipToBounds="True"
+              >
+            <Border.Clip>
+                <RectangleGeometry Rect="0,0,400,605"
+                                   RadiusX="10"
+                                   RadiusY="10"
+                                   />
+                
+                
+            </Border.Clip>
+
+            <StackPanel Margin="0 120 0 0 ">
+                <TextBlock  Text="Sign Up" Foreground="White" TextAlignment="Center" FontSize="46" 
+                           FontWeight="Light"
+                           />
+
+                <TextBlock Text="You want, I sell" Foreground="White" TextAlignment="Center" FontSize="16" 
+                           FontWeight="Light"
+                           Margin="0 15 0 3"
+                           />
+            </StackPanel>
+            
+        </Border>
+
+        <Border Grid.Column="1" Background="White"
+           CornerRadius="0 10 10 0"
+           ClipToBounds="True"
+         >
+            <!--Close icon-->
+            <Grid>
+                <materialDesign:PackIcon Kind="Close" VerticalAlignment="Top" Width="20" Height="20" HorizontalAlignment="Right" Opacity="0.3" Margin="0 13 14 0"/>
+                <StackPanel VerticalAlignment="Center" Margin="75 0">
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="50" materialDesign:HintAssist.Hint="Username" materialDesign:HintAssist.FloatingOffset="0, -20" BorderBrush="#c5c8cc" BorderThickness="0 0 0 1.5" Text="John.Doe_am"/>
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="50" materialDesign:HintAssist.Hint="Email" materialDesign:HintAssist.FloatingOffset="0, -20" BorderBrush="#c5c8cc" BorderThickness="0 0 0 1.5" Text="John.Doe_am@gmailc.com" Margin="0 27"/>
+                   
+                </StackPanel>
             </Grid>
 
-            <TextBlock Text="Username"/>
-            <PasswordBox Margin="10" Grid.Row="1"/>
-        </Grid>
+        </Border>
     </Grid>
 </Window>
