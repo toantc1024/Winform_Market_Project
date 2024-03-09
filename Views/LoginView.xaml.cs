@@ -23,5 +23,10 @@ namespace Winform_Market_Project.Views
         {
             InitializeComponent();
         }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
