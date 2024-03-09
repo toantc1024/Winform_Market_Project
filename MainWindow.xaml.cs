@@ -21,7 +21,8 @@ namespace Winform_Market_Project
         {
             InitializeComponent();
             LoginView loginView = new LoginView();
-            loginView.ShowDialog();
+            loginView.Show();
+            this.Close();
 
         }
 
