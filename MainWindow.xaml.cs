@@ -20,8 +20,10 @@ namespace Winform_Market_Project
         public MainWindow()
         {
             InitializeComponent();
-            LoginView loginView = new LoginView();
-            loginView.Show();
+            //LoginView loginView = new LoginView();
+            //loginView.Show();
+            CheckoutView checkoutView = new CheckoutView();
+            checkoutView.Show();
             this.Close();
 
         }
