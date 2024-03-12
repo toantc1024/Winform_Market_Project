@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Winform_Market_Project.Views
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for AuthView.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class AuthView : Window
     {
-        public LoginView()
+        public AuthView()
         {
             InitializeComponent();
-        }
-
-        private void CloseWindow(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
