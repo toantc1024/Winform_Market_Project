@@ -13,16 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views.UserControls
+namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for SignUp.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class SignUp : UserControl
+    public partial class Login : Page
     {
-        public SignUp()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void SignInHandler(object sender, RoutedEventArgs e)
+        {
+            AuthView view = (AuthView)Window.GetWindow(this);
+            view.SignIn(Username.Text, Password.Password);
         }
     }
 }

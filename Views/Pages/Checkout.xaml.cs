@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views.UserControls
+namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Checkout.xaml
     /// </summary>
-    public partial class Login : UserControl
+    public partial class Checkout : Page
     {
-        public Login()
+        public Checkout()
         {
             InitializeComponent();
+        }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            MainView view = (MainView)Window.GetWindow(this);
+
+            view.Close();
         }
     }
 }

@@ -4,89 +4,59 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Winform_Market_Project.Views"
-                xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        WindowStartupLocation="CenterScreen"
-        AllowsTransparency="True"
-        Background="Transparent"
+        xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainView"
-        Height="760" Width="1280"
-        >
+        Height="850"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="{x:Null}"
+        AllowsTransparency="True">
     <Grid>
-        <Border Background="#cfd5e5" CornerRadius="40" BorderThickness="2" BorderBrush="#ebedf3" Padding="20" MouseDown="Border_MouseDown"  >
-            <Border CornerRadius="40">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0, 1">
-                        <GradientStop Color="#fefefe" Offset="0" />
-                        <GradientStop Color="#fefefe" Offset="1" />
-                    </LinearGradientBrush>
-                </Border.Background>
+        <materialDesign:Card Margin="10"
+                             UniformCornerRadius="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="14*" />
+                </Grid.ColumnDefinitions>
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="130"/>
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="materialDesign:PackIcon">
+                        <Setter Property="Width"
+                                Value="55"></Setter>
+                        <Setter Property="Height"
+                                Value="55"></Setter>
+                    </Style>
+                </Grid.Resources>
 
-                    <!-- Left menu -->
-                    <Border CornerRadius="30" Background="#7163ba" Margin="20">
-                        <Grid>
-                            <StackPanel VerticalAlignment="Top">
-                                <Button Style="{StaticResource topMenuButton}">
-                                    <Icon:PackIconMaterial Kind="ShoppingOutline"/>
-                                </Button>
-                                <Separator Background="#877cc5" Margin="20 0 20 10" Height="0.8"/>
-                                <Button Style="{StaticResource menuButton}" Background="#5a5080">
-                                    <Icon:PackIconMaterial Kind="HomeVariant"/>
-                                </Button>
-                                <Button Style="{StaticResource menuButton}">
-                                    <Icon:PackIconMaterial Kind="Shopping"/>
-                                </Button>
-                                <Button Style="{StaticResource menuButton}">
-                                    <Icon:PackIconMaterial Kind="Account"/>
-                                </Button>
-                                <Button Style="{StaticResource menuButton}">
-                                    <Icon:PackIconMaterial Kind="fileDocument"/>
-                                </Button>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
+                <uc:SideBar />
+                <Frame Grid.Column="1"
+                      x:Name="RenderPage">
 
-                    <!-- Main menu -->
-                    <Grid Grid.Column="1" Margin="5 20 25 20">
-                        <TextBlock Text="Top product" FontSize="32"/>
-                        <Border BorderBrush="Red" BorderThickness="1">
-                            
-                        </Border>
-                        <!--<Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
+                </Frame>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    
-                    -->
-                        <!-- Title Section -->
-                        <!--
-                    <StackPanel Margin="7 10 0 25">
-                        <TextBlock Text="Primary" Foreground="#797295" FontSize="13"/>
-                        <TextBlock Text="Dashboard" Style="{StaticResource titleText}" />
-                    </StackPanel>-->
-
-                    </Grid>
-
-
-
-
+                <Grid Grid.Column="1">
+                    <Button Background="Orange"
+                            Foreground="White"
+                            BorderBrush="Orange"
+                            Margin="20"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                            ToolTip="MaterialDesignFloatingActionMiniLightButton"
+                            Click="CloseWindow">
+                        <materialDesign:PackIcon Width="40"
+                                                 Height="40"
+                                                 Kind="Close" />
+                    </Button>
                 </Grid>
+                
+            </Grid>
 
-            </Border>
-        </Border>
-
+        </materialDesign:Card>
     </Grid>
 </Window>

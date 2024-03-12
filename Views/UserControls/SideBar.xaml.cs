@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views.UserControls.Sidebar
+namespace Winform_Market_Project.Views.UserControls
 {
     /// <summary>
     /// Interaction logic for SideBar.xaml

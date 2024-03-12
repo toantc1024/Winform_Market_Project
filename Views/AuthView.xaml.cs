@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Winform_Market_Project.Views.Pages;
 
 namespace Winform_Market_Project.Views
 {
@@ -22,6 +23,36 @@ namespace Winform_Market_Project.Views
         public AuthView()
         {
             InitializeComponent();
+            AuthFrame.Content = new Login();
+        }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        public void SignIn(string username, string password)
+        {
+            /// 2 template username, password
+            ///     
+            string ADMIN_USERNAME = "admin";
+            string ADMIN_PASSWORD = "123";
+
+            if(username==ADMIN_USERNAME && password==ADMIN_PASSWORD)
+            {
+                MainView view = new MainView();
+                view.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
+            }
+        }
+
+        private void Login_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
