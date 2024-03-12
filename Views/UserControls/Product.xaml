@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Winform_Market_Project.Views.UserControls.Product"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Name="product">
+    <Grid Background="#FFFFF0E7" Margin="0 15 0 0" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Height="80" Width="80" Margin="15 10 0 10" HorizontalAlignment="Left">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="{Binding Path=Source, ElementName=product}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock Name="tbName" Grid.Column="1" Text="{Binding Path=Title, ElementName=product}" FontWeight="SemiBold" FontSize="16" VerticalAlignment="Center"/> 
+        <TextBlock Name="tbRef" Grid.Column="1" Text="{Binding Path=Ref, ElementName=product}" FontSize="11" VerticalAlignment="Center" Margin="0 38 0 0" Foreground="#909090"/>
+        <TextBlock Name="tbColor" Grid.Column="2" Text="{Binding Path=Color, ElementName=product}" FontSize="16" VerticalAlignment="Center" FontWeight="SemiBold"/> 
+        <TextBlock Name="tbCount" Grid.Column="3" Text="{Binding Path=Count, ElementName=product}" FontSize="16" VerticalAlignment="Center" FontWeight="SemiBold"/>
+
+        <StackPanel Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Button Name="btnAdd" Width="20" Height="20" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+            Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton">
+                <materialDesign:PackIcon Kind="Plus" Width="16" Height="16"/>
+            </Button>
+
+            <Button Name="btnMinus" Margin="0 5 0 0" Width="20" Height="20" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+            Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton">
+                <materialDesign:PackIcon Kind="Minus" Width="16" Height="16"/>
+            </Button>
+        </StackPanel>
+
+        <TextBlock Name="tbPrice" Grid.Column="5" Text="{Binding Path=Price, ElementName=product}" FontSize="16" VerticalAlignment="Center" FontWeight="SemiBold"/>
+
+        <Button Grid.Column="6" Name="btnDelete" Width="50" Height="50" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+            Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton">
+            <materialDesign:PackIcon Kind="Delete" />
+        </Button>
+    </Grid>
+</UserControl>
