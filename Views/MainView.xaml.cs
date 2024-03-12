@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Winform_Market_Project.Views.Pages;
 
 namespace Winform_Market_Project.Views
 {
@@ -22,14 +23,12 @@ namespace Winform_Market_Project.Views
         public MainView()
         {
             InitializeComponent();
+            RenderPage.Content = new Checkout();
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        private void CloseWindow(object sender, RoutedEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Left)
-            {
-                this.DragMove();
-            }
+            this.Close();
         }
     }
 }

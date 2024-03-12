@@ -10,28 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views
+namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for CheckoutView.xaml
+    /// Interaction logic for SignUp.xaml
     /// </summary>
-    public partial class CheckoutView : Window
+    public partial class SignUp : Page
     {
-        public CheckoutView()
+        public SignUp()
         {
             InitializeComponent();
         }
-
-        private void CloseWindow(object sender, RoutedEventArgs e)
+        private void EventHandler(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

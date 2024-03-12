@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
+        xmlns:page="clr-namespace:Winform_Market_Project.Views.Pages"
         xmlns:local="clr-namespace:Winform_Market_Project.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -35,7 +36,7 @@
 
             </Border.Clip>
 
-            <StackPanel Margin="0 120 0 0 ">
+            <StackPanel Margin="0 0 0 0 " VerticalAlignment="Center">
                 <TextBlock  Text="Bee shop"
                             Foreground="White"
                             TextAlignment="Center"
@@ -59,13 +60,16 @@
                 CornerRadius="0 10 10 0"
                 ClipToBounds="True">
             <Grid>
+
                 <Button Background="Orange"
                         Foreground="White"
                         BorderBrush="Orange"
                         Margin="5"
+                        Click="CloseWindow"
                         Panel.ZIndex="999"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
+                         materialDesign:ShadowAssist.ShadowDepth="Depth0"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                         Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                         ToolTip="MaterialDesignFloatingActionMiniLightButton">
@@ -75,7 +79,9 @@
                 </Button>
 
                 <!--Close icon-->
-                <uc:Login />
+                <Frame x:Name="AuthFrame">
+
+                </Frame>
             </Grid>
 
         </Border>
