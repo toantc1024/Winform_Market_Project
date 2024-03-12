@@ -112,15 +112,21 @@
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="1">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <StackPanel Margin=" 0 0 0 10">
+                                <uc:Product Source="/Image/10.jpg" Title="Witty kitty" Ref="Ref.000293881" Color="White" Count="1" Price="999.00 USD"/>
+                                <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000294501" Color="Brown" Count="1" Price="9999.00 USD"/>
+                                <uc:Product Source="/Image/8.jpg" Title="Angry kitty" Ref="Ref.000243901" Color="White" Count="1" Price="1999.00 USD"/>
+                                <uc:Product Source="/Image/7.jpg" Title="Two angry kitty" Ref="Ref.000693901" Color="Yellow" Count="2" Price="19999.00 USD"/>
+                                <uc:Product Source="/Image/10.jpg" Title="Witty kitty" Ref="Ref.008493901" Color="White" Count="1" Price="999.00 USD"/>
+                                <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000296901" Color="Brown" Count="1" Price="8999.00 USD"/>
+                                <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000296901" Color="Brown" Count="1" Price="8999.00 USD"/>
+                                <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000296901" Color="Brown" Count="1" Price="8999.00 USD"/>
+                                <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000296901" Color="Brown" Count="1" Price="8999.00 USD"/>
+                                <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000296901" Color="Brown" Count="1" Price="8999.00 USD"/>
+                            </StackPanel>
+                        </ScrollViewer>
 
-                        <StackPanel Margin=" 0 0 0 10">
-                            <uc:Product Source="/Image/10.jpg" Title="Witty kitty" Ref="Ref.000293881" Color="White" Count="1" Price="999.00 USD"/>
-                            <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000294501" Color="Brown" Count="1" Price="9999.00 USD"/>
-                            <uc:Product Source="/Image/8.jpg" Title="Angry kitty" Ref="Ref.000243901" Color="White" Count="1" Price="1999.00 USD"/>
-                            <uc:Product Source="/Image/9.jpg" Title="Two angry kitty" Ref="Ref.000693901" Color="Black and White" Count="2" Price="19999.00 USD"/>
-                            <uc:Product Source="/Image/10.jpg" Title="Witty kitty" Ref="Ref.008493901" Color="White" Count="1" Price="999.00 USD"/>
-                            <uc:Product Source="/Image/11.jpg" Title="Cute kitty" Ref="Ref.000296901" Color="Brown" Count="1" Price="8999.00 USD"/>
-                        </StackPanel>
                     </Grid>
 
                     <Grid Grid.Row="2">
