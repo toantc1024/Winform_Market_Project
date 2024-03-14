@@ -42,5 +42,12 @@ namespace Winform_Market_Project.Views.Pages
                 ellipseAvatar.Fill = avatarPicture;
             }
         }
+
+        private void OpenSignIn(object sender, RoutedEventArgs e)
+        {
+            AuthView view = (AuthView)Window.GetWindow(this);
+            view.ChangePageToSignIn(sender, e);
+            
+        }
     }
 }

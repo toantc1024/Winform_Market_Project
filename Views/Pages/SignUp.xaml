@@ -93,17 +93,36 @@
                              materialDesign:HintAssist.Hint="Retype password"
                              materialDesign:PasswordBoxAssist.Password="{Binding Path=Password2Validated, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
                              Style="{StaticResource MaterialDesignOutlinedPasswordBox}" />
-                
-                <Button Background="Orange"
-                        Foreground="White"
-                        Width="200"
-                        Height="30"
-                        HorizontalAlignment="Left"
-                        Click="EventHandler"
-                        Content="Sign Up"
-                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                        Style="{StaticResource MaterialDesignRaisedLightButton}"
-                        ToolTip="Resource name: MaterialDesignRaisedLightButton" />
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Background="Orange"
+                            Foreground="White"
+                            Width="100"
+                            Margin="0 0 10 0"
+                            Height="30"
+                            HorizontalAlignment="Left"
+                            Content="Sign Up"
+                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                            Style="{StaticResource MaterialDesignRaisedLightButton}"
+                            ToolTip="Resource name: MaterialDesignRaisedLightButton"
+                            Grid.ColumnSpan="2" />
+
+
+                    <Button Grid.Column="2"
+                            Background="White"
+                            Foreground="Orange"
+                            Click="OpenSignIn"
+                            Width="100"
+                            Height="30"
+                            HorizontalAlignment="Left"
+                            Content="Login"
+                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                            Style="{StaticResource MaterialDesignRaisedLightButton}"
+                            ToolTip="Resource name: MaterialDesignRaisedLightButton" />
+
+
+                </StackPanel>
+            
             </StackPanel>
         </Grid>
     </Grid>

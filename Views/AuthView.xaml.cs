@@ -36,6 +36,12 @@ namespace Winform_Market_Project.Views
             authPage.Content = new SignUp();
         }
 
+        public void ChangePageToSignIn(object sender, EventArgs e)
+        {
+            authPage.Content = new Login();
+        }
+
+
         public void SignIn(string username, string password)
         {
             /// 2 template username, password
@@ -61,6 +67,11 @@ namespace Winform_Market_Project.Views
         }
 
         private void AuthFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
+
+        private void authPage_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
 
         }

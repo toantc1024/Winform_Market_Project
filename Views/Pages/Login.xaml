@@ -11,10 +11,34 @@
       Title="Login">
 
     <Grid>
-        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Background="#FFFF7500"
+         CornerRadius="10"
+         ClipToBounds="True">
+   
 
-            <StackPanel VerticalAlignment="Center"
-                        Margin="75 0">
+     <StackPanel  Margin="0 0 0 0 " VerticalAlignment="Center">
+         <TextBlock  Text="Bee shop"
+                     Foreground="White"
+                     TextAlignment="Center"
+                     FontSize="46"
+                     FontWeight="Bold" />
+
+         <TextBlock Text="Online Exchange Portal"
+                    Foreground="White"
+                    TextAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Light"
+                    Margin="0 15 0 3" />
+     </StackPanel>
+
+ </Border>
+        <StackPanel  Grid.Column="1"
+                     VerticalAlignment="Center"
+                        Margin="20 0">
                 <TextBox VerticalAlignment="Top"
                          x:Name="Username"
                          Margin="0 0 0 25"
@@ -43,39 +67,36 @@
 
                 </StackPanel>
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="63*" />
-                        <ColumnDefinition Width="262*"/>
-                        <ColumnDefinition Width="325*" />
-                    </Grid.ColumnDefinitions>
-                    <Button Background="Orange"
-                            Foreground="White"
-                            Click="SignInHandler"
-                            Width="100"
-                            Height="30"
-                            HorizontalAlignment="Left"
-                            Content="Login"
-                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                            Style="{StaticResource MaterialDesignRaisedLightButton}"
-                            ToolTip="Resource name: MaterialDesignRaisedLightButton" Grid.ColumnSpan="2" />
+            <StackPanel Orientation="Horizontal">
+                <Button Background="Orange"
+                        Foreground="White"
+                        Click="SignInHandler"
+                        Width="100"
+                        Margin="0 0 10 0"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        Content="Login"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        ToolTip="Resource name: MaterialDesignRaisedLightButton"
+                        Grid.ColumnSpan="2" />
 
 
-                    <Button Grid.Column="2" Background="White"
-                            Foreground="Orange"
-                            Click="OpenSignUp"
-                            Width="100"
-                            Height="30"
-                            HorizontalAlignment="Left"
-                            Content="Sign Up"
-                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                            Style="{StaticResource MaterialDesignRaisedLightButton}"
-                            ToolTip="Resource name: MaterialDesignRaisedLightButton" />
+                <Button Grid.Column="2"
+                        Background="White"
+                        Foreground="Orange"
+                        Click="OpenSignUp"
+                        Width="100"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        Content="Sign Up"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        ToolTip="Resource name: MaterialDesignRaisedLightButton" />
 
 
-                </Grid>
+            </StackPanel>
             </StackPanel>
 
         </Grid>
-    </Grid>
 </Page>
