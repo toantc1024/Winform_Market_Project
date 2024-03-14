@@ -13,21 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views.Pages
+namespace Winform_Market_Project.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for ProductDetails.xaml
+    /// Interaction logic for ImageContainer.xaml
     /// </summary>
-    public partial class ProductDetails : Page
+    public partial class ImageContainer : UserControl
     {
-        public ProductDetails()
+        public ImageContainer()
         {
             InitializeComponent();
         }
 
-        private void ImageContainer_Loaded(object sender, RoutedEventArgs e)
+        public ImageSource ImageSource
         {
-
+            get { return (ImageSource)GetValue(ImageSourceProperty); }
+            set { SetValue(ImageSourceProperty, value); }
         }
+        public static readonly DependencyProperty ImageSourceProperty = DependencyProperty.Register("ImageSource", typeof(ImageSource), typeof(Product));
+
     }
 }

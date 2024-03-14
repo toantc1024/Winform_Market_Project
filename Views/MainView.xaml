@@ -7,7 +7,7 @@
         xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Height="850"
+        Height="650"
         Width="1200"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
