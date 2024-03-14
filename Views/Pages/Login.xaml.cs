@@ -27,8 +27,15 @@ namespace Winform_Market_Project.Views.Pages
 
         private void SignInHandler(object sender, RoutedEventArgs e)
         {
+            
             AuthView view = (AuthView)Window.GetWindow(this);
             view.SignIn(Username.Text, Password.Password);
+        }
+
+        private void OpenSignUp(object sender, RoutedEventArgs e)
+        {
+            AuthView view = (AuthView)Window.GetWindow(this);
+            view.ChangePageToSignUp(sender, e);
         }
     }
 }

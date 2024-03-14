@@ -23,12 +23,17 @@ namespace Winform_Market_Project.Views
         public AuthView()
         {
             InitializeComponent();
-            AuthFrame.Content = new Login();
+            authPage.Content = new Login();
         }
 
         private void CloseWindow(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        public void ChangePageToSignUp(object sender, EventArgs e)
+        {
+            authPage.Content = new SignUp();
         }
 
         public void SignIn(string username, string password)
@@ -51,6 +56,11 @@ namespace Winform_Market_Project.Views
         }
 
         private void Login_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AuthFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
 
         }

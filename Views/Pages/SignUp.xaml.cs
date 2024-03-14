@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,20 @@ namespace Winform_Market_Project.Views.Pages
         }
         private void EventHandler(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void ChangeImage_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png; *.bmp)|*.jpg; *.jpeg; *.png; *.bmp";
+            bool? success = fileDialog.ShowDialog();
+            if (success == true)
+            {
+                string path = fileDialog.FileName;
+                ImageBrush avatarPicture = new ImageBrush();
+                avatarPicture.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri(path));
+                ellipseAvatar.Fill = avatarPicture;
+            }
         }
     }
 }

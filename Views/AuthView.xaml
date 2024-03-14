@@ -79,9 +79,10 @@
                 </Button>
 
                 <!--Close icon-->
-                <Frame x:Name="AuthFrame">
-
+                <Frame x:Name="authPage">
+                    
                 </Frame>
+             
             </Grid>
 
         </Border>
