@@ -12,26 +12,11 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Column="0">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="/Image/Logo.png"
-                       Margin="50 2 0 0 "
-                       Width="50"
-                       Height="50"
-                       VerticalAlignment="Center"/>
-                <TextBlock Name="tbAppName"
-                       Text="BeeBay"
-                       FontSize="40"
-                       FontWeight="Bold"
-                       VerticalAlignment="Center"
-                       Margin="20 0 0 0"/>
-            </StackPanel>
-        </Grid>
-        <Grid Grid.Row="1">
+    
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="8*"/>

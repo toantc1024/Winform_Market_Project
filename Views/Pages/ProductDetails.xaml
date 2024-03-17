@@ -4,14 +4,61 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:Winform_Market_Project.Views.Pages"
+      xmlns:pages="clr-namespace:Winform_Market_Project.Views.Pages"
+      xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
       mc:Ignorable="d"
       d:DesignHeight="450"
       d:DesignWidth="800"
       Title="ProductDetails"
       Background="White">
 
-    <Grid VerticalAlignment="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition Width=".8*"/>
+            <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+
+          <Border BorderBrush="#FFE0E0E0"
+                BorderThickness="1" Margin="5" CornerRadius="5">
+            <uc:ProductImages />
+        </Border>
+
+        <ScrollViewer Grid.Column="1">
+            <Border>
+                <StackPanel>
+                    <Border MinHeight="200"
+                            Background="White"
+                            BorderBrush="#FFE0E0E0"
+                            BorderThickness="1"
+                            CornerRadius="5"
+                            Margin="5">
+
+                    </Border>
+                    <Border MinHeight="200"
+                            Background="White"
+                            BorderBrush="#FFE0E0E0"
+                            BorderThickness="1"
+                            CornerRadius="5"
+                            Margin="5">
+
+                    </Border>
+                    <Border MinHeight="200"
+                            Background="White"
+                            BorderBrush="#FFE0E0E0"
+                            BorderThickness="1"
+                            CornerRadius="5"
+                            Margin="5">
+
+                    </Border>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+    <!--<Grid VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="*" />
@@ -286,5 +333,5 @@ Information
             </Grid>
         </Grid>
 
-    </Grid>
+    </Grid>-->
 </Page>
