@@ -28,30 +28,12 @@
                 <Grid Grid.Column="1"
                       Name="RenderPage">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="72" />
                         <RowDefinition />
                         <RowDefinition Height="72" />
                     </Grid.RowDefinitions>
 
+              
                     <Grid Grid.Row="0">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Image/Logo.png"
-                                   Margin="50 5 0 0 "
-                                   Width="62"
-                                   Height="62"
-                                   VerticalAlignment="Center" />
-                            <TextBlock Name="tbAppName"
-                                       Text="BeeBay"
-                                       FontSize="45"
-                                       FontWeight="Bold"
-                                       VerticalAlignment="Center"
-                                       Margin="20 5 20 5" />
-
-                      
-                        </StackPanel>
-                    </Grid>
-                    <Grid Grid.Row="1">
 
                         <StackPanel Margin=" 0 0 0 10">
                             <uc:Product Source="/Image/11.jpg"
@@ -93,7 +75,7 @@
                         </StackPanel>
                     </Grid>
 
-                    <Grid Grid.Row="2">
+                    <Grid Grid.Row="1">
                         <Border Name="bdPanel"
                                 Background="Transparent"
                                 BorderBrush="Black"

@@ -6,11 +6,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Winform_Market_Project.Views.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="750" d:DesignWidth="800">
+             d:DesignHeight="750" d:DesignWidth="50">
     <Grid Grid.Column="0"
           Name="MenuBar"
           Background="#FFFFB32A">
-        <ListView Margin="0 30 0 0">
+        <!--<ListView Margin="0 30 0 0">
             <ListViewItem HorizontalAlignment="Center"
                           Margin="0 5">
                 <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
@@ -88,6 +88,6 @@
                     </StackPanel>
                 </Button>
             </ListViewItem>
-        </ListView>
+        </ListView>-->
     </Grid>
 </UserControl>
