@@ -7,14 +7,21 @@
       xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d"
-      Height="850"
-      Width="1200"
       Background="White"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Checkout">
 
     <Grid>
-        <materialDesign:Card Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <uc:SideBar />
+        </Grid>
+        
+        <materialDesign:Card Margin="5" Grid.Column="1">
             <Grid>
                 <Grid.Resources>
                     <Style TargetType="materialDesign:PackIcon">
@@ -29,87 +36,88 @@
                       Name="RenderPage">
                     <Grid.RowDefinitions>
                         <RowDefinition />
-                        <RowDefinition Height="72" />
+                        <RowDefinition Height="55" />
                     </Grid.RowDefinitions>
 
-              
-                    <Grid Grid.Row="0">
 
-                        <StackPanel Margin=" 0 0 0 10">
-                            <uc:Product Source="/Image/11.jpg"
+                    <Grid Grid.Row="0">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <StackPanel Margin=" 0 0 0 5">
+                                <uc:Product Source="/Image/11.jpg"
                                         Title="Cute kitty"
                                         Ref="Ref.000294501"
                                         Color="Brown"
                                         Count="1"
                                         Price="9999.00 USD" />
-                            <uc:Product Source="/Image/11.jpg"
+                                <uc:Product Source="/Image/11.jpg"
                                         Title="Cute kitty"
                                         Ref="Ref.000294501"
                                         Color="Brown"
                                         Count="1"
                                         Price="9999.00 USD" />
-                            <uc:Product Source="/Image/11.jpg"
+                                <uc:Product Source="/Image/11.jpg"
                                         Title="Cute kitty"
                                         Ref="Ref.000294501"
                                         Color="Brown"
                                         Count="1"
                                         Price="9999.00 USD" />
-                            <uc:Product Source="/Image/11.jpg"
+                                <uc:Product Source="/Image/11.jpg"
                                         Title="Cute kitty"
                                         Ref="Ref.000294501"
                                         Color="Brown"
                                         Count="1"
                                         Price="9999.00 USD" />
-                            <uc:Product Source="/Image/11.jpg"
+                                <uc:Product Source="/Image/11.jpg"
                                         Title="Cute kitty"
                                         Ref="Ref.000294501"
                                         Color="Brown"
                                         Count="1"
                                         Price="9999.00 USD" />
-                            <uc:Product Source="/Image/11.jpg"
+                                <uc:Product Source="/Image/11.jpg"
                                         Title="Cute kitty"
                                         Ref="Ref.000296901"
                                         Color="Brown"
                                         Count="1"
                                         Price="8999.00 USD" />
-                        </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
                     </Grid>
 
                     <Grid Grid.Row="1">
                         <Border Name="bdPanel"
                                 Background="Transparent"
                                 BorderBrush="Black"
-                                BorderThickness="0,2,0,0">
+                                BorderThickness="0,1.5,0,0">
                             <StackPanel Orientation="Horizontal"
-                                        Margin="15 0 0 5">
+                                        Margin="10 0 0 0">
                                 <CheckBox  materialDesign:CheckBoxAssist.CheckBoxSize="25"
-                                           FontSize="25"
+                                           FontSize="20"
                                            Content="Select All"
                                            Style="{StaticResource MaterialDesignCheckBox}" />
                                 <Button Name="btnDelete"
                                         Height="50"
-                                        Margin="20"
-                                        FontSize="25"
+                                        Margin="15 0 0 0"
+                                        FontSize="20"
                                         Content="Delete"
                                         Background="Transparent"
                                         Foreground="Black"
                                         VerticalAlignment="Center"
                                         BorderBrush="Transparent" />
 
-                                <Label Name="lbTotal"
-                                       Margin="400 0 0 0"
-                                       FontSize="25"
-                                       Content="Total: "
+                                <TextBlock Name="lbTotal"
+                                       Margin="210 0 0 0"
+                                       FontSize="20"
+                                       Text="Total: "
                                        VerticalAlignment="Center" />
                                 <TextBlock Name="tbTotal"
-                                           Margin="0 0 160 0"
-                                           FontSize="25"
+                                           Margin="0 0 110 0"
+                                           FontSize="20"
                                            Text="{Binding BoundText}"
                                            VerticalAlignment="Center" />
                                 <Button Name="btnCheckout"
-                                        Width="160"
-                                        Height="50"
-                                        FontSize="25"
+                                        Width="130"
+                                        Height="40"
+                                        FontSize="20"
                                         Content="Check Out"
                                         Background="#FFFFB32A"
                                         VerticalAlignment="Center"
