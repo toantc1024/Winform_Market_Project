@@ -5,44 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Winform_Market_Project.Views"
         xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
+        xmlns:page="clr-namespace:Winform_Market_Project.Views.Pages"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Height="650"
         Width="1200"
+        xmlns:viewModel="clr-namespace:Winform_Market_Project.ViewModels"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="{x:Null}"
         AllowsTransparency="True">
+    <Window.DataContext>
+        <viewModel:MainViewModel />
+    </Window.DataContext>
     <Border>
+        
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <uc:Navigation />
-            <Button Background="Orange"
-                    Foreground="White"
-                    BorderBrush="Orange"
-                    Margin="5"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Right"
-                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                    Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
-                    ToolTip="MaterialDesignFloatingActionMiniLightButton"
-                    Click="CloseWindow">
-                <materialDesign:PackIcon Width="40"
-                                         Height="40"
-                                         Kind="Close" />
-            </Button>
-            <Grid Grid.Row="1"
-                  Background="White">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40*" />
-                    <ColumnDefinition Width="57*" />
-                    <ColumnDefinition Width="503*" />
-                </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <uc:SideBar Loaded="SideBar_Loaded" Grid.Column="0"/>
 
+          
+            <Grid Grid.Column="1"
+                  Background="White">
                 <Grid.Resources>
                     <Style TargetType="materialDesign:PackIcon">
                         <Setter Property="Width"
@@ -51,26 +39,29 @@
                                 Value="55"></Setter>
                     </Style>
                 </Grid.Resources>
-
-                <uc:SideBar Loaded="SideBar_Loaded" />
+                <Button Grid.Column="2"
+                        Background="Orange"
+                        Foreground="White"
+                        BorderBrush="Orange"
+                        Margin="5"
+                        Panel.ZIndex="99999"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                        ToolTip="MaterialDesignFloatingActionMiniLightButton"
+                        Click="CloseWindow">
+                    <materialDesign:PackIcon Width="40"
+                                             Height="40"
+                                             Kind="Close" />
+                </Button>
                 <Frame Grid.Column="1"
                        x:Name="RenderPage"
                        Grid.ColumnSpan="2">
 
                 </Frame>
 
-                <Grid Grid.Column="1"
-                      Grid.ColumnSpan="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="15*" />
-                        <ColumnDefinition Width="41*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="553*" />
-                        <RowDefinition Height="277*" />
-                    </Grid.RowDefinitions>
-
-                </Grid>
+                <page:Products ProductItems="{Binding ProductItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
             </Grid>
         </Grid>

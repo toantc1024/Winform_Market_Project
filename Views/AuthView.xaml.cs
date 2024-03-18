@@ -54,7 +54,7 @@ namespace Winform_Market_Project.Views
                 MainView view = new MainView();
                 view.Show();
                 this.Close();
-            }
+            }   
             else
             {
                 MessageBox.Show("Invalid Username or Password");

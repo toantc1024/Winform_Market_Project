@@ -1,16 +1,59 @@
 ﻿<UserControl x:Class="Winform_Market_Project.Views.Pages.Products"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
+             xmlns:model="clr-namespace:Winform_Market_Project.Models"
              xmlns:local="clr-namespace:Winform_Market_Project.Views.Pages"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Red">
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    
+    
+    <Grid Background="White">
         <Grid>
-            <StackPanel>
-                <Button>Click</Button>
-            </StackPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <uc:Navigation />
+         
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel>
+                    
+                </StackPanel>
+                <ScrollViewer Grid.Column="1"
+                              VerticalScrollBarVisibility="Auto">
+
+                
+                    <WrapPanel Orientation="Horizontal">
+                   
+                        
+                        <ItemsControl ItemsSource="{Binding ProductItems}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type model:Product}">
+                                    <uc:ProductCard ProductData="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                        
+                    </WrapPanel>
+
+                </ScrollViewer>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

@@ -3,13 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:Winform_Market_Project.Views.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="70" d:DesignWidth="800">
+             mc:Ignorable="d"
+             d:DesignHeight="70"
+             d:DesignWidth="800">
     <materialDesign:ColorZone Padding="16"
                               Mode="PrimaryMid">
         <Grid>
+
+            <Grid.Resources>
+                <Style TargetType="materialDesign:PackIcon">
+                    <Setter Property="Width"
+                            Value="55"></Setter>
+                    <Setter Property="Height"
+                            Value="55"></Setter>
+                </Style>
+            </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition MaxWidth="200"
                                   MinWidth="100" />
@@ -28,7 +38,7 @@
                                           materialDesign:ElevationAssist.Elevation="Dp2"
                                           CornerRadius="10"
                                           Mode="Standard">
-                    <Grid >
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
@@ -36,17 +46,19 @@
                         </Grid.ColumnDefinitions>
                         <Button Style="{StaticResource MaterialDesignToolButton}">
                             <materialDesign:PackIcon Kind="Search"
-                                                     Opacity=".56" />
+                                                     Opacity=".56"
+                                                     Height="16"
+                                                     Width="18"
+                                                     VerticalAlignment="Center" />
                         </Button>
                         <TextBox Grid.Column="1"
                                  MinWidth="200"
                                  Margin="8,0,0,0"
                                  VerticalAlignment="Center"
-                                 
                                  materialDesign:HintAssist.Hint="What you want to buy?"
                                  materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                                  BorderThickness="0" />
-                      
+
                     </Grid>
                 </materialDesign:ColorZone>
 
