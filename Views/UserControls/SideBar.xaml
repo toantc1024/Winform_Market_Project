@@ -86,17 +86,17 @@
         <Grid Name="navGrid" Grid.Column="0">
             <StackPanel>
                 <!--Grid for the Menu Toggle Button-->
-                <Grid Height="50">
-                    <!--Grid for the Menu Toggle Button-->
+                <!--<Grid Height="50">
+                    --><!--Grid for the Menu Toggle Button--><!--
                     <Grid Height="60">
-                        <!--Menu Title text-->
+                        --><!--Menu Title text--><!--
                         <TextBlock Grid.Row="1"
                                Grid.Column="0"
                                Margin="73 -20 0 0"
                                Text="M E N U"                             
                                Background="Transparent"                              
                                Style="{StaticResource font_style}">
-                            <!--Shadow effect-->
+                            --><!--Shadow effect--><!--
                             <TextBlock.Effect>
                                 <DropShadowEffect BlurRadius="10"
                                                   ShadowDepth="1"
@@ -107,7 +107,7 @@
                         </TextBlock>
                     </Grid>
 
-                    <!--Toggle Button-->
+                    --><!--Toggle Button--><!--
                     <ToggleButton x:Name="Tg_Btn"
                                   Grid.Column="0"
                                   VerticalAlignment="Center"
@@ -118,7 +118,7 @@
                                   BorderThickness="0"
                                   Style="{StaticResource tb_style}">
 
-                        <!--Toggle Button - Checked, Unchecked Events-->
+                        --><!--Toggle Button - Checked, Unchecked Events--><!--
                         <ToggleButton.Triggers>
 
                             <EventTrigger RoutedEvent="ToggleButton.Unchecked">
@@ -151,9 +151,9 @@
                             </EventTrigger>
 
                         </ToggleButton.Triggers>
-                    </ToggleButton>
+                    </ToggleButton>-->
 
-                </Grid>
+                <!--</Grid>-->
                 <!--ListView with menu list items-->
                 <ListView x:Name="LV"
                           Background="Transparent"
@@ -171,17 +171,17 @@
                                                  Height="25"
                                                  Margin="9 0 0 0"
                                                  Foreground="White"/>
-                            <TextBlock Text="Home"
+                            <!--<TextBlock Text="Home"
                                        Margin="25 0 0 0"
-                                       Style="{StaticResource font_style}"/>
+                                       Style="{StaticResource font_style}"/>-->
                         </StackPanel>
 
                         <!--Tooltip-->
-                        <ListViewItem.ToolTip>
+                        <!--<ListViewItem.ToolTip>
                             <ToolTip x:Name="tt_home"
                                      Content="Home"
                                      Style="{StaticResource tt_style}"/>
-                        </ListViewItem.ToolTip>
+                        </ListViewItem.ToolTip>-->
                     </ListViewItem>
                     
                     <!--Store-->
@@ -195,17 +195,17 @@
                                                  Height="25"
                                                  Margin="9 0 0 0"
                                                  Foreground="White"/>
-                            <TextBlock Text="Store"
+                            <!--<TextBlock Text="Store"
                                        Margin="25 0 0 0"
-                                       Style="{StaticResource font_style}"/>
+                                       Style="{StaticResource font_style}"/>-->
                         </StackPanel>
 
                         <!--Tooltip-->
-                        <ListViewItem.ToolTip>
+                        <!--<ListViewItem.ToolTip>
                             <ToolTip x:Name="tt_store"
                                      Content="Store"
                                      Style="{StaticResource tt_style}"/>
-                        </ListViewItem.ToolTip>
+                        </ListViewItem.ToolTip>-->
                     </ListViewItem>
                     
                     <!--Finance-->
@@ -219,17 +219,17 @@
                                                  Height="25"
                                                  Margin="9 0 0 0"
                                                  Foreground="White"/>
-                            <TextBlock Text="Finance"
+                            <!--<TextBlock Text="Finance"
                                        Margin="25 0 0 0"
-                                       Style="{StaticResource font_style}"/>
+                                       Style="{StaticResource font_style}"/>-->
                         </StackPanel>
 
                         <!--Tooltip-->
-                        <ListViewItem.ToolTip>
+                        <!--<ListViewItem.ToolTip>
                             <ToolTip x:Name="tt_finance"
                                      Content="Finance"
                                      Style="{StaticResource tt_style}"/>
-                        </ListViewItem.ToolTip>
+                        </ListViewItem.ToolTip>-->
                     </ListViewItem>
                     
                     <!--Cart-->
@@ -243,17 +243,17 @@
                                                  Height="25"
                                                  Margin="9 0 0 0"
                                                  Foreground="White"/>
-                            <TextBlock Text="Cart"
+                            <!--<TextBlock Text="Cart"
                                        Margin="25 0 0 0"
-                                       Style="{StaticResource font_style}"/>
+                                       Style="{StaticResource font_style}"/>-->
                         </StackPanel>
 
                         <!--Tooltip-->
-                        <ListViewItem.ToolTip>
+                        <!--<ListViewItem.ToolTip>
                             <ToolTip x:Name="tt_cart"
                                      Content="Cart"
                                      Style="{StaticResource tt_style}"/>
-                        </ListViewItem.ToolTip>
+                        </ListViewItem.ToolTip>-->
                     </ListViewItem>
                     
                     <!--Account Settings-->
@@ -267,17 +267,17 @@
                                                  Height="25"
                                                  Margin="9 0 0 0"
                                                  Foreground="White"/>
-                            <TextBlock Text="Account Settings"
+                            <!--<TextBlock Text="Account Settings"
                                        Margin="25 0 0 0"
-                                       Style="{StaticResource font_style}"/>
+                                       Style="{StaticResource font_style}"/>-->
                         </StackPanel>
 
                         <!--Tooltip-->
-                        <ListViewItem.ToolTip>
+                        <!--<ListViewItem.ToolTip>
                             <ToolTip x:Name="tt_accountsettings"
                                      Content="Account Settings"
                                      Style="{StaticResource tt_style}"/>
-                        </ListViewItem.ToolTip>
+                        </ListViewItem.ToolTip>-->
                     </ListViewItem> 
                     
                     <!--Log Out-->
@@ -291,17 +291,17 @@
                                                  Height="25"
                                                  Margin="9 0 0 0"
                                                  Foreground="White"/>
-                            <TextBlock Text="Log Out"
+                            <!--<TextBlock Text="Log Out"
                                        Margin="25 0 0 0"
-                                       Style="{StaticResource font_style}"/>
+                                       Style="{StaticResource font_style}"/>-->
                         </StackPanel>
 
                         <!--Tooltip-->
-                        <ListViewItem.ToolTip>
+                        <!--<ListViewItem.ToolTip>
                             <ToolTip x:Name="tt_logout"
                                      Content="Log Out"
                                      Style="{StaticResource tt_style}"/>
-                        </ListViewItem.ToolTip>
+                        </ListViewItem.ToolTip>-->
                     </ListViewItem>
 
                     <ListView.ItemContainerStyle>
