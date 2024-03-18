@@ -47,10 +47,5 @@ namespace Winform_Market_Project.Views.UserControls
                 tt_logout.Visibility = Visibility.Visible;
             }
         }
-
-        private void Tg_Btn_Unchecked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
