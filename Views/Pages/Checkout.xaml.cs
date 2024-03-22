@@ -10,18 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views
+namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for Checkout.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class Checkout : Page
     {
-        public LoginView()
+        public Checkout()
         {
             InitializeComponent();
+        }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            MainView view = (MainView)Window.GetWindow(this);
+
+            view.Close();
         }
     }
 }

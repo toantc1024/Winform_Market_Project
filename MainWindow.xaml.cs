@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using MaterialDesignThemes.Wpf;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,6 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Winform_Market_Project.Views;
+using Winform_Market_Project.Views.Pages;
 
 namespace Winform_Market_Project
 {
@@ -20,9 +22,14 @@ namespace Winform_Market_Project
         public MainWindow()
         {
             InitializeComponent();
-            LoginView loginView = new LoginView();
-            loginView.Show();
+            AuthView authView = new AuthView();
+            authView.Show();
+            //CheckoutView checkoutView = new CheckoutView();
+            //checkoutView.Show();
+            this.Close();
+
         }
+
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

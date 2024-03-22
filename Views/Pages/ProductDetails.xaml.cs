@@ -10,28 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Winform_Market_Project.Views.Pages;
 
-namespace Winform_Market_Project.Views
+namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for ProductDetails.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class ProductDetails : Page
     {
-        public MainView()
+        public ProductDetails()
         {
             InitializeComponent();
-            RenderPage.Content = new ProductDetails();
         }
 
-        private void CloseWindow(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void SideBar_Loaded(object sender, RoutedEventArgs e)
+        private void ImageContainer_Loaded(object sender, RoutedEventArgs e)
         {
 
         }

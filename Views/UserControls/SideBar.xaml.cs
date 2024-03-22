@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Winform_Market_Project.Views.UserControls.Sidebar
+namespace Winform_Market_Project.Views.UserControls
 {
     /// <summary>
     /// Interaction logic for SideBar.xaml
@@ -23,6 +23,29 @@ namespace Winform_Market_Project.Views.UserControls.Sidebar
         public SideBar()
         {
             InitializeComponent();
+        }
+
+        private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
+        {
+            //Set Tooltip Visibility
+            if (Tg_Btn.IsChecked == true)
+            {
+                tt_home.Visibility = Visibility.Collapsed;
+                tt_store.Visibility = Visibility.Collapsed;
+                tt_finance.Visibility = Visibility.Collapsed;
+                tt_cart.Visibility = Visibility.Collapsed;
+                tt_accountsettings.Visibility = Visibility.Collapsed;
+                tt_logout.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                tt_home.Visibility = Visibility.Visible;
+                tt_store.Visibility = Visibility.Visible;
+                tt_finance.Visibility = Visibility.Visible;
+                tt_cart.Visibility = Visibility.Visible;
+                tt_accountsettings.Visibility = Visibility.Visible;
+                tt_logout.Visibility = Visibility.Visible;
+            }
         }
     }
 }

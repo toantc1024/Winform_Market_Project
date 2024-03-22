@@ -11,19 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Winform_Market_Project.Views.Pages;
 
 namespace Winform_Market_Project.Views
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for CheckoutView.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class CheckoutView : Window
     {
-        public MainView()
+        public CheckoutView()
         {
             InitializeComponent();
-            RenderPage.Content = new ProductDetails();
         }
 
         private void CloseWindow(object sender, RoutedEventArgs e)
@@ -31,7 +29,7 @@ namespace Winform_Market_Project.Views
             this.Close();
         }
 
-        private void SideBar_Loaded(object sender, RoutedEventArgs e)
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
