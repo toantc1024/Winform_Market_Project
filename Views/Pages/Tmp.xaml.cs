@@ -10,24 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Winform_Market_Project.Views.UserControls;
 
-namespace Winform_Market_Project.Views.UserControls
+namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for SideBar.xaml
+    /// Interaction logic for Tmp.xaml
     /// </summary>
-    public partial class SideBar : UserControl
+    public partial class Tmp : Window
     {
-        public SideBar()
+        public Tmp()
         {
             InitializeComponent();
         }
 
+        private void BG_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            SideBar sideBar = new SideBar();
+            sideBar.Tg_Btn.IsChecked = false;
+        }
+
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
         {
-            //Set Tooltip Visibility
             if (Tg_Btn.IsChecked == true)
             {
                 tt_home.Visibility = Visibility.Collapsed;
@@ -46,16 +51,6 @@ namespace Winform_Market_Project.Views.UserControls
                 tt_accountsettings.Visibility = Visibility.Visible;
                 tt_logout.Visibility = Visibility.Visible;
             }
-        }
-
-        private void Tg_Btn_Unchecked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Tg_Btn_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

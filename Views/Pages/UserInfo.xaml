@@ -1,0 +1,424 @@
+﻿<Window x:Class="Winform_Market_Project.Views.Pages.UserInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Winform_Market_Project.Views.Pages"
+        xmlns:uc="clr-namespace:Winform_Market_Project.Views.UserControls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid HorizontalAlignment="Left" Grid.Column="0">
+            <uc:SideBar/>
+        </Grid>
+
+        <Grid Margin="0 0 0 0" Grid.Column="1">
+
+            <WrapPanel HorizontalAlignment="Center">
+                <Border BorderBrush="White" 
+                         BorderThickness="1" 
+                         CornerRadius="15">
+                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0" 
+                                          UniformCornerRadius="15"
+                                          BorderThickness="5"
+                                          BorderBrush="White"
+                                          Width="720"
+                                          Height="Auto"
+                                          Margin="0 5 0 0"
+                                          Background="Black">
+
+                        <ScrollViewer VerticalScrollBarVisibility="Visible">
+                            <StackPanel Margin="0 0 0 5">
+                                <TextBlock Text="User information"
+                                    Foreground="White"
+                                    FontSize="22"
+                                    FontWeight="SemiBold"
+                                    Margin="30 5 0 0"/>
+
+                                <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0" 
+                                          UniformCornerRadius="15"
+                                          BorderThickness="5"
+                                          BorderBrush="White"
+                                          Width="680"
+                                          Height="350"
+                                          Margin="0 5 0 0"
+                                          Background="White">
+
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition Width="8*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid Grid.Column="0" Margin="0 40 0 0">
+                                            <Ellipse Width="125" Height="125" Margin="0 0 0 110" Fill="Black">
+                                                <Ellipse.Effect>
+                                                    <BlurEffect Radius="20"/>
+                                                </Ellipse.Effect>
+                                            </Ellipse>
+                                            <Ellipse Name="ellipseAvatar" Width="148" Height="148" Margin="0 0 0 110" Stroke="Black" StrokeThickness="2">
+                                                <Ellipse.Fill>
+                                                    <ImageBrush ImageSource="/Image/11.jpg"/>
+                                                </Ellipse.Fill>
+                                            </Ellipse>
+                                            <Button Name="btnChangeImage" Content="Change image" FontSize="16" FontWeight="DemiBold"  Margin="0 120 0 0" 
+                                             Width="145" Style="{StaticResource MaterialDesignRaisedLightButton}" 
+                                             ToolTip="Resource name: MaterialDesignRaisedLightButton"
+                                             Click="ChangeImage_Click"/>
+                                        </Grid>
+
+                                        <StackPanel Grid.Column="1" 
+                                             VerticalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox VerticalAlignment="Top"
+                                              HorizontalAlignment="Left"
+                                              Margin="0 0 0 10"
+                                              Width="230" Height="48"
+                                              materialDesign:HintAssist.Hint="Government ID"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                            <Binding.ValidationRules>
+
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+
+                                                <TextBox VerticalAlignment="Top"
+                                              Margin="25 0 0 10"
+                                              Width="230" Height="48"
+                                              materialDesign:HintAssist.Hint="Phone number"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                            <Binding.ValidationRules>
+
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox VerticalAlignment="Top"
+                                              HorizontalAlignment="Left"
+                                              Margin="0 0 0 10"
+                                              Width="230" Height="48"
+                                              materialDesign:HintAssist.Hint="Full name"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                            <Binding.ValidationRules>
+
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+
+                                                <TextBox VerticalAlignment="Top"
+                                              Margin="25 0 0 10"
+                                              Width="230" Height="48"
+                                              materialDesign:HintAssist.Hint="Sex"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                            <Binding.ValidationRules>
+
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox VerticalAlignment="Top"
+                                              HorizontalAlignment="Left"
+                                              Margin="0 0 0 10"
+                                              Width="230" Height="48"
+                                              materialDesign:HintAssist.Hint="Government ID"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                            <Binding.ValidationRules>
+
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+
+                                                <TextBox VerticalAlignment="Top"
+                                              Margin="25 0 0 10"
+                                              Width="230" Height="48"
+                                              materialDesign:HintAssist.Hint="Phone number"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                            <Binding.ValidationRules>
+
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+
+                                            <TextBox VerticalAlignment="Top"
+                                              HorizontalAlignment="Left" 
+                                              Margin="0 0 0 10"
+                                              Width="485"
+                                              Height="48"
+                                              materialDesign:HintAssist.Hint="Location"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                <TextBox.Text>
+                                                    <Binding Path="Text2"
+                                                      UpdateSourceTrigger="PropertyChanged">
+                                                        <Binding.ValidationRules>
+
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+
+                                            <TextBox VerticalAlignment="Top"
+                                              HorizontalAlignment="Left" 
+                                              Margin="0 0 0 10"
+                                              Width="485"
+                                              Height="48"
+                                              materialDesign:HintAssist.Hint="Email"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                                <TextBox.Text>
+                                                    <Binding Path="Text2"
+                                                      UpdateSourceTrigger="PropertyChanged">
+                                                        <Binding.ValidationRules>
+
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Background="Orange"
+                                                 Foreground="White"
+                                                 Width="200"
+                                                 Margin="0 0 10 0"
+                                                 Height="40"
+                                                 HorizontalAlignment="Center"
+                                                 Content="Update information"
+                                                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                                 ToolTip="Resource name: MaterialDesignRaisedLightButton"
+                                                 Grid.ColumnSpan="2" />
+
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </Grid>
+
+                                </materialDesign:Card>
+
+                                <TextBlock Text="Account information"
+                                    Foreground="White"
+                                    FontSize="22"
+                                    FontWeight="SemiBold"
+                                    Margin="30 5 0 0"/>
+
+                                <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0" 
+                                          UniformCornerRadius="15"
+                                          BorderThickness="5"
+                                          BorderBrush="White"
+                                          Width="680"
+                                          Height="90"
+                                          Margin="0 5 0 0"
+                                          Background="White">
+                                    <StackPanel Orientation="Horizontal" 
+                                         VerticalAlignment="Center"
+                                         Margin="20 0 0 0">
+                                        <TextBox VerticalAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              Width="210" Height="48"
+                                              materialDesign:HintAssist.Hint="User name"
+                                              Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                            <TextBox.Text>
+                                                <Binding Path="Text2" UpdateSourceTrigger="PropertyChanged">
+                                                    <Binding.ValidationRules>
+
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+
+                                        <PasswordBox VerticalAlignment="Center"
+                                              Margin="30 0 0 0"
+                                              Width="210"
+                                              materialDesign:HintAssist.Hint="Password"
+                                              materialDesign:PasswordBoxAssist.Password="{Binding Path=Password2Validated, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
+                                              Style="{StaticResource MaterialDesignOutlinedPasswordBox}" />
+
+                                        <Button Background="Orange"
+                                                 Foreground="White"
+                                                 Width="145"
+                                                 Margin="30 0 10 0"
+                                                 Height="48"
+                                                 HorizontalAlignment="Center"
+                                                 Content="Change password"
+                                                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                                 ToolTip="Resource name: MaterialDesignRaisedLightButton"/>
+                                    </StackPanel>
+
+                                </materialDesign:Card>
+
+                                <TextBlock Text="Orders"
+                                    Foreground="White"
+                                    FontSize="22"
+                                    FontWeight="SemiBold"
+                                    Margin="30 5 0 5"/>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ComboBox Width="110" Height="48"
+                                           Margin="20 0 0 0"
+                                           Background="White"
+                                           materialDesign:HintAssist.Hint="Search"
+                                           materialDesign:TextFieldAssist.HasClearButton="True"
+                                           ItemsSource="{Binding ShortStringList}"
+                                           Style="{StaticResource MaterialDesignOutlinedComboBox}">
+                                            <ComboBox.SelectedItem>
+                                                <Binding Mode="TwoWay"
+                                                  Path="SelectedValidationOutlined"
+                                                  UpdateSourceTrigger="PropertyChanged">
+                                                    <Binding.ValidationRules>
+
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </ComboBox.SelectedItem>
+                                        </ComboBox>
+
+                                        <Border BorderThickness="2" 
+                                         BorderBrush="White" 
+                                         Height="48"
+                                         Margin="30 0 0 0"
+                                         CornerRadius="10" 
+                                         Padding="2"
+                                         HorizontalAlignment="Center" 
+                                         VerticalAlignment="Center">
+                                            <TextBox Width="350"
+                                                     Height="48"
+                                                     Foreground="White"
+                                                     FontSize="18"
+                                                     VerticalContentAlignment="Center"/>
+                                        </Border>
+
+                                    </StackPanel>
+
+                                    <Border Background="White"
+                                            BorderThickness="2.5" 
+                                            BorderBrush="White" 
+                                            Height="45"
+                                            Width="680"
+                                            Margin="0 8 0 5"
+                                            CornerRadius="10">
+                                        <Grid Background="White"
+                                              Margin="1"
+                                              Width="680"
+                                              VerticalAlignment="Center">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="190"/>
+                                                <ColumnDefinition Width="125"/>
+                                                <ColumnDefinition Width="145"/>
+                                                <ColumnDefinition Width="100"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid Grid.Column="0">
+                                                <TextBlock Text="OrderID"
+                                                           FontSize="18"
+                                                           FontWeight="DemiBold"
+                                                           Margin="10 0 0 0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="1">
+                                                <TextBlock Text="Customer Name"
+                                                           FontSize="18"
+                                                           FontWeight="DemiBold"
+                                                           Margin="0 0 0 0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="2">
+                                                <TextBlock Text="Date"
+                                                           FontSize="18"
+                                                           FontWeight="DemiBold"
+                                                           Margin="36 0 0 0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="3">
+                                                <TextBlock Text="Status"
+                                                           FontSize="18"
+                                                           FontWeight="DemiBold"
+                                                           Margin="8 0 0 0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="4">
+                                                <TextBlock Text="Price"
+                                                           FontSize="18"
+                                                           FontWeight="DemiBold"
+                                                           Margin="15 0 0 0"/>
+                                            </Grid>
+                                            
+                                        </Grid>
+                                    </Border>
+
+                                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0 0 0 15">
+                                        <StackPanel Orientation="Vertical">
+                                            <uc:Order OrderID="Order001"
+                                                  CustomerName="Nguyễn  Tuấn Kiệt"
+                                                  Date="20/03/2024"
+                                                  Status="In Transit"
+                                                  Price="999.0 USD"
+                                                  Margin="0 5 0 5"/>
+                                            <uc:Order OrderID="Order002"
+                                                  CustomerName="Trần Công Toản"
+                                                  Date="22/03/2024"
+                                                  Status="Delivered"
+                                                  Price="1999.0 USD"
+                                                  Margin="0 5 0 5"/>
+                                            <uc:Order OrderID="Order003"
+                                                  CustomerName="Nguyễn Đình Quốc Duy"
+                                                  Date="23/03/2024"
+                                                  Status="Processing"
+                                                  Price="999.0 USD"
+                                                  Margin="0 5 0 5"/>
+                                            <uc:Order OrderID="Order003"
+                                                  CustomerName="Nguyễn Đình Quốc Duy"
+                                                  Date="23/03/2024"
+                                                  Status="Processing"
+                                                  Price="999.0 USD"
+                                                  Margin="0 5 0 5"/>
+                                            <uc:Order OrderID="Order003"
+                                                  CustomerName="Nguyễn Đình Quốc Duy"
+                                                  Date="23/03/2024"
+                                                  Status="Processing"
+                                                  Price="999.0 USD"
+                                                  Margin="0 5 0 5"/>
+                                            <uc:Order OrderID="Order003"
+                                                  CustomerName="Nguyễn Đình Quốc Duy"
+                                                  Date="23/03/2024"
+                                                  Status="Processing"
+                                                  Price="999.0 USD"
+                                                  Margin="0 5 0 10"/>
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                    
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                    </materialDesign:Card>
+                </Border>
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Window>
