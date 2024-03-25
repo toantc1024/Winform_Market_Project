@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Winform_Market_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for Checkout.xaml
+    /// Interaction logic for CheckOut.xaml
     /// </summary>
-    public partial class Checkout : Page
+    public partial class CheckOut : Window
     {
-        public Checkout()
+        public CheckOut()
         {
             InitializeComponent();
-        }
-
-        private void CloseWindow(object sender, RoutedEventArgs e)
-        {
-            MainView view = (MainView)Window.GetWindow(this);
-
-            view.Close();
         }
     }
 }
